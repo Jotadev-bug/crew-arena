@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas ASCII</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="terminal">
+    <pre class="banner" aria-hidden="true">
++--------------------------------+
+|  T O D O   L I S T   v0.1      |
++--------------------------------+</pre>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <label for="task-input" class="prompt">&gt; nueva tarea:</label>
+      <input id="task-input" type="text" placeholder="escribe algo..." maxlength="200" required>
+      <button type="submit">[ AÑADIR ]</button>
+    </form>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty-msg" class="empty">-- no hay tareas --</p>
+
+    <footer class="footer">
+      <span id="counter">0 pendientes / 0 total</span>
+      <button id="clear-done" type="button">[ BORRAR COMPLETADAS ]</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
